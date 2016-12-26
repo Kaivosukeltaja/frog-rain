@@ -1,0 +1,3 @@
+templateScript: /frog-rain-ui-module/templates/components/simple-example/simple-example.ftl
+renderType: freemarker
+title: Simple example

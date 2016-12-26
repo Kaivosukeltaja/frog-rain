@@ -1,0 +1,9 @@
+templateScript: /frog-rain-ui-module/templates/pages/base/base.ftl
+renderType: site
+visible: true
+title: Base page
+areas:
+  content:
+    renderType: freemarker
+    type: list
+    availableComponents: !include /frog-rain-ui-module/templates/globalAvailability/top.yaml
