@@ -1,0 +1,9 @@
+templateScript: /frog-rain-ui-module/templates/pages/page-with-script/page-with-script.ftl
+renderType: site
+visible: true
+title: Page with script
+areas:
+  content:
+    renderType: freemarker
+    type: list
+    availableComponents: !include /frog-rain-ui-module/templates/globalAvailability/top.yaml

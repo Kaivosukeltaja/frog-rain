@@ -88,8 +88,8 @@
   height: auto;
   width: auto;
   opacity: 0;
-  z-index: z(dropdownOverlay);
-  background-color: color(white);
+  z-index: 100;
+  background-color: #fff;
   filter: alpha(opacity = 0);
 }
 
@@ -521,7 +521,7 @@
   .select2-results > .select2-results__options {
     max-height: 200px;
     overflow-y: auto;
-    border: 2px solid color(corePurple);
+    border: 2px solid #333;
   }
 }
 
@@ -559,195 +559,4 @@
 .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
   padding-right: 8px;
   padding-left: 20px;
-}
-
-// Custom styles starts from here
-.ppr-select {
-  width: 100%;
-
-  padding: 10px;
-  height: 46px;
-
-  background-color: transparent;
-  border: 0;
-  border-bottom: 1px solid color(grey40);
-
-  &__label {
-    font-size: 12px;
-    line-height: 1;
-    color: color(grey40);
-
-    .select2 & {
-      position: absolute;
-      top: -5px;
-    }
-  }
-
-  & ~ .select2-container {
-    margin-top: 20px;
-
-    .icon {
-      transition: transform 0.5s, color 0.5s;
-    }
-  }
-
-  & ~ .select2-container--open .icon {
-    transform: rotate(180deg);
-    color: color(corePurple);
-  }
-
-
-  &.error ~ .select2-container &__label {
-    color: color(red);
-  }
-
-  &.error ~ .select2-container &__container {
-    border-bottom: 2px solid color(red);
-
-    .icon {
-      color: color(red);
-    }
-  }
-
-  & ~ .select2-container--disabled {
-    pointer-events: none;
-
-    .ppr-select__container {
-      border-bottom: 1px dotted color(grey40);
-    }
-
-    .select2-selection {
-      background-color: transparent;
-
-      .select2-selection__rendered {
-        color: color(grey40);
-      }
-    }
-  }
-
-  &__footer {
-    font-size: 12px;
-    line-height: 1;
-    margin: 7px 0;
-
-    &--error {
-      color: color(red);
-    }
-  }
-
-  &__container {
-    cursor: pointer;
-    display: block;
-    user-select: none;
-
-    background-color: transparent;
-    border: 0;
-    border-bottom: 1px solid color(grey40);
-
-    padding: 10px 0;
-
-
-    &.select2-selection--single {
-      .select2-selection__rendered {
-        height: 24px;
-        line-height: 24px;
-        display: block;
-        padding: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        color: #444;
-      }
-
-      .select2-selection__arrow {
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        top: 12px;
-        color: color(grey40);
-        font-size: 11px;
-
-        right: 0;
-
-        b {
-          display: none;
-        }
-      }
-    }
-  }
-
-  &__dropdown {
-    max-height: 200px;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    top: -2px;
-    width: 100%;
-    z-index: z(dropdown);
-    background-color: color(white);
-    transition: max-height 2s;
-
-    .select2-container--visible & {
-      max-height: 200px;
-
-      .select2-results {
-        margin-top: 0;
-        transition: margin 0.2s ease-out;
-      }
-    }
-
-    .select2-search {
-      display: block;
-      padding: 4px;
-
-      &--hide {
-        display: none;
-      }
-    }
-
-    .select2-results {
-      display: block;
-      position: relative;
-      // margin-top: -200px; // Disabled until we can have animations
-      margin-top: 0;
-      transition: margin 0.2s ease-out;
-
-      > .select2-results__options {
-        max-height: 200px;
-        overflow-y: auto;
-      }
-
-      &__options {
-        border: 2px solid color(corePurple);
-        border-radius: 2px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      &__option {
-        padding: 10px 6px;
-        user-select: none;
-        cursor: pointer;
-        color: color(corePurple);
-
-        &[aria-selected=true] {
-          background-color: color(corePurple);
-          color: color(white);
-        }
-
-        &--highlighted {
-          background-color: color(corePurple);
-          color: color(white);
-
-          &[aria-selected=true] {
-            background-color: color(corePurple);
-            color: color(white);
-          }
-        }
-      }
-    }
-  }
 }

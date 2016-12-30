@@ -13,9 +13,13 @@
   [#assign site = sitefn.site()!]
   [#assign theme = sitefn.theme(site)!]
 
+  <!-- Styles defined in your site go here -->
   [#list theme.cssFiles as cssFile]
       <link rel="stylesheet" href="${cssFile.link}" media="${cssFile.media}" />
   [/#list]
+
+  <!-- Link our demonstration CSS directly -->
+  <link rel="stylesheet" href="/.resources/frog-rain-ui-module/webresources/css/styles.css" />
 
   [#if cmsfn.editMode]
     [#-- Stylesheet for edit mode if necessary --]
