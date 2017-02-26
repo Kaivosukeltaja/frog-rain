@@ -19,13 +19,13 @@
   [/#list]
 
   <!-- Link our demonstration CSS directly -->
-  <link rel="stylesheet" href="/.resources/frog-rain-ui-module/webresources/css/styles.css" />
+  <link rel="stylesheet" href="/.resources/%MODULE_NAME%/webresources/css/styles.css" />
 
   [#if cmsfn.editMode]
     [#-- Stylesheet for edit mode if necessary --]
   [/#if]
 
-  <script data-main="/.resources/frog-rain-ui-module/webresources/js/main" src="${ctx.contextPath}/.resources/frog-rain-ui-module/webresources/js/vendor/require.js"></script>
+  <script data-main="/.resources/%MODULE_NAME%/webresources/js/main" src="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/vendor/require.js"></script>
 
   [@cms.page /]
 </head>

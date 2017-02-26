@@ -1,44 +1,43 @@
+// eslint-disable-next-line
 requirejs.config({
   baseUrl: '/.resources/{%uiModule%}/webresources/js',
   urlArgs: 'c={%cacheBuster%}',
 
   paths: {
-    jquery: 'vendor/common',
-    lodash: 'vendor/lodash',
+    jquery: 'bundle/vendor.common',
+    lodash: 'vendor/lodash.min',
     modernizr: 'vendor/modernizr',
-    ppr: 'vendor/common',
-
-    'ppr.page': 'pages',
-    'ppr.component': 'components',
-    'ppr.module': 'module',
-    'ppr.ui': 'ui',
-    'ppr.editor': 'ppr_editor',
+    ppr: 'bundle/vendor.common',
+    'frograin.config': 'frograin.config',
 
     // inject
   },
 
   shim: {
     lodash: {
-      exports: '_'
+      exports: '_',
     },
 
     modernizr: {
-      exports: 'Modernizr'
+      exports: 'Modernizr',
     },
 
   },
-  waitSeconds: 45
+  waitSeconds: 45,
 });
 
 // Custom error handler
+// eslint-disable-next-line
 requirejs.onError = err => console.log(err);
 
-require(['modernizr', 'ppr', 'ppr_config', 'jquery'], (Modernizr, PPR, Configuration, $, BalanceText) => {
+// eslint-disable-next-line
+require(['modernizr', 'ppr', 'frograin.config', 'jquery'], (Modernizr, PPR, Configuration, $) => {
   PPR.setConfig(Configuration);
   PPR.build();
 
   // Load editor scripts
   if (Configuration.editorMode === true) {
+    // eslint-disable-next-line
     require(['ppr.editor'], (Editor) => {
       Editor.build();
     });

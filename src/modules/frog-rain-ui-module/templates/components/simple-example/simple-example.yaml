@@ -1,0 +1,3 @@
+templateScript: /%MODULE_NAME%/templates/components/simple-example/simple-example.ftl
+renderType: freemarker
+title: Simple example

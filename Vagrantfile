@@ -13,8 +13,10 @@ sudo mkdir /opt/magnolia
 sudo chown tomcat:tomcat /opt/magnolia
 
 echo 'JAVA_OPTS="-Dmagnolia.update.auto=true -Dmagnolia.develop=true -Dmagnolia.home=/opt/magnolia -Dmagnolia.resources.dir=/vagrant/magnolia-modules/ -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Xmx1024m -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC"' | sudo tee -a /usr/share/tomcat/conf/tomcat.conf
-sudo wget '#{$magnoliaDownloadUrl}' -O /usr/share/tomcat/webapps/ROOT.war
+echo 'Downloading latest Magnolia from URL #{$magnoliaDownloadUrl}'
+sudo wget '#{$magnoliaDownloadUrl}' -nv -O /usr/share/tomcat/webapps/ROOT.war
 
+echo 'Starting up Tomcat at localhost:8888'
 sudo systemctl start tomcat
 SCRIPT
 

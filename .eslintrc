@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "amd": true,
+    "mocha": true
+  },
+
+  "globals": [
+    "after",
+    "afterEach",
+    "before",
+    "beforeEach" ,
+    "describe",
+    "it"
+  ],
+
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "class-methods-use-this": "off"
+  },
+
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb"
+}

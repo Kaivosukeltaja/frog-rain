@@ -1,5 +1,5 @@
 [#include "../base/base-header.ftl"]
-<body data-page="pageWithScript">
+<body data-page="scriptPage">
   <div class="main-container">
     [@cms.area name="content"/]
   </div>

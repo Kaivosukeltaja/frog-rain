@@ -1,0 +1,9 @@
+templateScript: /%MODULE_NAME%/templates/pages/script-page/script-page.ftl
+renderType: site
+visible: true
+title: Page with script
+areas:
+  content:
+    renderType: freemarker
+    type: list
+    availableComponents: !include /%MODULE_NAME%/templates/globalAvailability/top.yaml
