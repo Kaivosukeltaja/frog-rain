@@ -33,7 +33,7 @@ export default {
     moduleId: 'ppr',
     sourceRoot: 'ppr',
     getModuleId: (moduleName) => {
-      let moduleNameParts = moduleName.split('/');
+      let moduleNameParts = moduleName.split(/\/|\\/);
       const partCount = moduleNameParts.length;
 
       moduleNameParts = moduleNameParts.filter((part, index) => (

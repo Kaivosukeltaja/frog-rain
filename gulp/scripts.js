@@ -147,7 +147,10 @@ export default (gulp, options, moduleName) => {
     // Convert normal files
     _.each(_.values(fileObjects), (file) => {
       if (typeof file.namespace !== 'undefined') {
-        const sourcePath = file.path.split('/webresources/js/').pop().slice(0, -3);
+        const sourcePath = file.path.split(`${path.sep}webresources${path.sep}js${path.sep}`)
+          .pop()
+          .slice(0, -3)
+          .replace(/\\/g, '/');
 
         // Only add file if not already there
         if (_.indexOf(namespaceIndex, file.namespace) === -1) {
