@@ -40,7 +40,7 @@ gulp
 * [PostCSS](http://postcss.org/) for [autoprefixing](https://github.com/postcss/autoprefixer) properties (no need to worry about -o, -webkit, -moz, etc)
 * [Vagrant](https://www.vagrantup.com/) for quickly creating a local Magnolia development server
 * [Magnolia 5.5 Community Edition](https://www.magnolia-cms.com/)
-* [JSCS](http://jscs.info/) for enforcing code style conventions
+* [ESLint](http://eslint.org/) for enforcing code style conventions
 * [PPR.js](https://www.npmjs.com/package/ppr-js) for writing component specific JavaScript
 * [RequireJS](http://requirejs.org/) for dynamically loading JS dependencies
 * [Karma](https://karma-runner.github.io/1.0/index.html), [Mocha](https://mochajs.org/) and [Chai](http://chaijs.com/) for tests (WIP)
@@ -52,4 +52,4 @@ gulp
 * UI toolkit such as Bootstrap or Foundation
 * Any external fonts or icon kits
 * MTE (Magnolia Templating Essentials)
-* YAML extends (will be natively supported in Magnolia 5.5.1 or 5.5.2)
+* YAML extends (will be natively supported in a near future release of Magnolia)
