@@ -1,5 +1,5 @@
 templateScript: /%MODULE_NAME%/templates/pages/script-page/script-page.ftl
-renderType: site
+renderType: freemarker
 visible: true
 title: Page with script
 areas:

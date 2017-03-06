@@ -1,5 +1,5 @@
 templateScript: /frog-rain-ui-module/templates/pages/base/base.ftl
-renderType: site
+renderType: freemarker
 visible: true
 title: Base page
 areas:
