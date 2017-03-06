@@ -26,7 +26,10 @@
   [/#if]
 
   <script>
-    window.magnolia.contextPath = '${ctx.contextPath}';
+    // Pass any Magnolia specific properties to JS here
+    window.magnolia = {
+      contextPath: '${ctx.contextPath}',
+    };
   </script>
 
   <script data-main="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/main" src="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/vendor/require.js"></script>
