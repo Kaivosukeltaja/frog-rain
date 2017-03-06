@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${content.title!'Frog Rain'}</title>
+  <title>${content.title!'Frog Rain kicks ass'}</title>
   <meta name="robots" content="noindex, nofollow" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -19,13 +19,13 @@
   [/#list]
 
   <!-- Link our demonstration CSS directly -->
-  <link rel="stylesheet" href="/.resources/%MODULE_NAME%/webresources/css/styles.css" />
+  <link rel="stylesheet" href="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/css/styles.css" />
 
   [#if cmsfn.editMode]
     [#-- Stylesheet for edit mode if necessary --]
   [/#if]
 
-  <script data-main="/.resources/%MODULE_NAME%/webresources/js/main" src="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/vendor/require.js"></script>
+  <script data-main="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/main" src="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/vendor/require.js"></script>
 
   [@cms.page /]
 </head>

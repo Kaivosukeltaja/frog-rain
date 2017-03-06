@@ -33,6 +33,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-filelist": "^1.0.0",
     "gulp-if": "^2.0.1",
+    "gulp-ignore": "^2.0.2",
     "gulp-inject-string": "^1.1.0",
     "gulp-jscs": "^4.0.0",
     "gulp-json-include-and-merge": "0.0.1",
