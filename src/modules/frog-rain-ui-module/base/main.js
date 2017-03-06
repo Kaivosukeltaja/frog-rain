@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 requirejs.config({
-  baseUrl: '/.resources/{%uiModule%}/webresources/js',
+  baseUrl: window.magnolia.contextPath + '/.resources/{%uiModule%}/webresources/js',
   urlArgs: 'c={%cacheBuster%}',
 
   paths: {

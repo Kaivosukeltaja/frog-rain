@@ -25,6 +25,10 @@
     [#-- Stylesheet for edit mode if necessary --]
   [/#if]
 
+  <script>
+    window.magnolia.contextPath = '${ctx.contextPath}';
+  </script>
+
   <script data-main="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/main" src="${ctx.contextPath}/.resources/%MODULE_NAME%/webresources/js/vendor/require.js"></script>
 
   [@cms.page /]
