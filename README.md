@@ -12,26 +12,43 @@ Frog Rain is built on the principle that all components and pages have their own
 
 ## How do I use it?
 
-Clone the repository and modify it to your needs. To see how it works, install the dependencies and either add the resulting light module from `magnolia-modules` to your Magnolia module directory or fire up the included Vagrant box and access <http://localhost:8888>.
+Clone the repository and modify it to your needs. To see how it works, install the dependencies, build the project with gulp, and create a page in Magnolia.
 
-Install dependencies:
+### 1. Install dependencies:
 
 ```
 npm install
 ```
 
-Start local Magnolia virtual server:
+### 2. Build the project:
+
+```
+gulp
+```
+
+This will build the files in `src` into the `magnolia-modules` directory.
+
+### 3. Start up Magnolia and connect it to the files.
+
+Connecting Magnolia to the files can be done in any of these three ways:
+ * Point your Magnolia instance's `magnolia.resources.dir` at the `magnolia-modules` directory.
+ * Use symlinks to link from your instance to the `magnolia-modules` directory.
+ * Copy the files from `magnolia-modules` directory to your instance.
+
+Or use the included Vagrant files to launch a local Magnolia virtual server (requires [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/)):
 
 ```
 vagrant up
 vagrant rsync-auto
 ```
 
-Build the project:
+Access it at http://localhost:8888.
 
-```
-gulp
-```
+### 4. In Magnolia, create pages with the new templates, and add the component to the pages.
+
+Notice that the "Simple example" component automatically loads and runs the javascript that it needs.
+
+Likewise, notice how the "Page with script" page template automatically loads and runs the script provided in its `src` directory.
 
 ## What is included
 * [Gulp](http://gulpjs.com/) for building the project
